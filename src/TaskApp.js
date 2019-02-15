@@ -1,7 +1,7 @@
 import {connect} from 'react-redux'
 import TaskList from './TaskList'
-import {addTask} from './actions'
-import {getAsync} from './helpers'
+import {addTask,addAsync} from './actions'
+
 
 const mapStatetoProps = (state) => ({
     tasks : state
@@ -9,7 +9,7 @@ const mapStatetoProps = (state) => ({
 
 const mapDispatchtoProps = (dispatch) => ({
     addATask : () => dispatch(addTask(10,10,"sdfdsfds","dsfdsfdsfd")),
-    addAsync : getAsync
+    addAsync : () => dispatch(addAsync())
 })
 
 //addATask takes in no arguments. It can be used without arguments
