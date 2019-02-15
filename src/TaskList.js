@@ -1,9 +1,10 @@
 import React from 'react'
 import Task from './Task'
 
-export default ({tasks,addATask}) => {
+export default ({tasks,addATask,addAsync}) => {
 
   //console.log(tasks)
+  //console.log(addAsync)
 
   const listTasks = tasks.map( (task,index) =>  <Task
       key={index}
@@ -17,6 +18,9 @@ export default ({tasks,addATask}) => {
        </ul>
 
        <button onClick={addATask} > Add a Task </button>.
+
+       <button  onClick={addAsync}> Perform Async </button>
+
     </div>
   )
 }
