@@ -1,7 +1,7 @@
 import React from 'react'
 import Task from './Task'
 
-export default ({tasks}) => {
+export default ({tasks,addATask}) => {
 
   //console.log(tasks)
 
@@ -15,6 +15,8 @@ export default ({tasks}) => {
        <ul>
            {listTasks}
        </ul>
+
+       <button onClick={addATask} > Add a Task </button>.
     </div>
   )
 }
